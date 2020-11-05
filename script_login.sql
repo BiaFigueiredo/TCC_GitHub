@@ -1,0 +1,11 @@
+--CRIANDO O BANCO DE DADOS
+CREATE DATABASE cadastro; 
+--USANDO O BANCO DE DADOS CRIADO
+USE cadastro;
+--CRIANDO A TABELA USUARIO NO BANCO DE DADOS
+CREATE TABLE `cadastro`.`usuario` (
+  `Usuario_id` INT NOT NULL AUTO_INCREMENT,
+  `usuario` VARCHAR(200) NOT NULL,
+  `senha` VARCHAR(32) NOT NULL,
+  `email` varchar(50) NOT NULL,
+  PRIMARY KEY (`Usuario_id`));
