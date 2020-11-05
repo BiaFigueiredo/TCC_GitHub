@@ -1,8 +1,9 @@
+<?php
+include('verifica_login.php');
+?>
 <link rel="stylesheet" type="text/css" href="index.css">
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 <!DOCTYPE html>
-
-
   <head>
     <meta charset="utf-8">
     <title>PERFIL</title>
@@ -36,22 +37,19 @@ LIVROS</div>
                                   <div class='row'>
                                     <div class='column'>
                                       <div class='green-column'>
-                                        <br><br>
-
-                                       <div class="ImagemPerfil ImagemGrande"><br>
-              <img src="https://pbs.twimg.com/profile_images/956541141683507200/yKiytA4J_400x400.jpg" alt="User"                          width="280" >
-                                      </div>
-
+                                        <br>
                                       </div>
                                     </div>
                                       <div class='column'>
                                       <div class='blue-column'>
                                         <h1>Dados do perfil</h1>
-                                     <div class="Lista01">        <br><br>
-                                       <ul><li> Leonardo Henrique Akahoshi </li>
-                                        <li>EmailAletorio@gmail.com</li>
-                                        <li><input type="password"  value = "89029822" ></li>
-                                        <li>Instuição Akaishi21 </li> </ul>
+                                     <div class="Lista01">       
+                                       <br>
+                                       <ul>
+                                        <li><?php echo $_SESSION['email'];?></li>
+                                        <br><br>
+                                        <h2><a href="logout.php">Sair</a></h2>
+                                        </ul>
                                         </div>
                                       </div>
                                     </div>
