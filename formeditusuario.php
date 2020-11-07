@@ -1,40 +1,26 @@
 <?php
 session_start();
+include('conexao.php');
+$sql = "SELECT FROM usuario WHERE id='1'";
+$resultado_usuario = mysqli_query($conexao, $sql);
+$row_usuario = mysqli_fetch_assoc($resultado_usuario);
 ?>
+
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <title>CADASTRE-SE</title>
+    <title>EDITAR</title>
     <link rel="stylesheet" href="Cadastro.css">
     <script src="https://kit.fontawesome.com/a076d05399.js"></script>
   </head>
   <body>
     
     <div class="container">
-      <header>Cadastro</header><?php
-      if ($_SESSION['status_cadastro']):
-      ?>
-      <div style="color: RGB(50,220,30);">
-        <p>Cadastro efetuado!</p>
-      </div>
-      <?php
-      endif;
-      unset($_SESSION['status_cadastro']);
-      ?>
-      <?php
-        if($_SESSION['usuario_cadastrado']):
-      ?>
-      <div style="color:RGB(220,0,0)">
-        <p>O email inserido já está cadastrado. Informe outro e tente novamente.</p>
-      </div>
-      <?php
-        endif;
-        unset($_SESSION['usuario_cadastrado']);
-      ?>
-      <form action="cadastro.php" method="POST">
+      <header>Editar</header>
+      <form action="editar.php" method="POST">
         <div class="input-field">
-          <input name="usuario" type="text" maxlength="50" required>
+          <input name="usuario" type="text" maxlength="50" required value="<?php echo($row_usuario); ?>">
           <label>Nome</label>
         </div>
         <div class="input-field">
@@ -61,16 +47,9 @@ session_start();
 <div class="button">
           <div class="inner">
 </div>
-<button type="submit">CADASTRAR</button>
+<button type="submit">EDITAR</button>
         </div>
 </form>
-<div class="signup">
-        Já possui cadastro? <a href="formlogin.php">Faça login aqui</a>
-      </div>
-      <div class="signup">
-        <a href="index.php">Voltar à pagina inicial</a>
-      </div>
-</div>
 <script>
       var input = document.querySelector('.pswrd');
       var show = document.querySelector('.show');

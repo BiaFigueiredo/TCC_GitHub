@@ -6,7 +6,7 @@ session_start();
   <head>
     <meta charset="utf-8">
     <title>LOGIN</title>
-    <link rel="stylesheet" href="cadastro.css">
+    <link rel="stylesheet" href="Cadastro.css">
     <script src="https://kit.fontawesome.com/a076d05399.js"></script>
   </head>
   <body>

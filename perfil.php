@@ -1,5 +1,6 @@
 <?php
 include('verifica_login.php');
+include('conexao.php');
 ?>
 <link rel="stylesheet" type="text/css" href="index.css">
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
@@ -47,6 +48,7 @@ LIVROS</div>
                                        <br>
                                        <ul>
                                         <li><?php echo $_SESSION['email'];?></li>
+                                        <li><?php echo $_SESSION['usuario'];?></li>
                                         <br><br>
                                         <h2><a href="logout.php">Sair</a></h2>
                                         </ul>

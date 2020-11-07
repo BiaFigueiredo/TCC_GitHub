@@ -7,5 +7,7 @@ CREATE TABLE `cadastro`.`usuario` (
   `Usuario_id` INT NOT NULL AUTO_INCREMENT,
   `usuario` VARCHAR(200) NOT NULL,
   `senha` VARCHAR(32) NOT NULL,
-  `email` varchar(50) NOT NULL,
+  `email` VARCHAR(50) NOT NULL,
+  `pessoa` VARCHAR(45) NOT NULL,
+  `data_cadastro` DATETIME NOT NULL;
   PRIMARY KEY (`Usuario_id`));

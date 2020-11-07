@@ -32,7 +32,7 @@ if($row['total'] == 1){
     exit;
 }
 //Inserindo os dados no banco de dados (incluíndo a data de cadastro)
-$sql = "INSERT INTO usuario (usuario, email, pessoa, senha, data_cadastro) values ('$usuario', '$email', '$pessoa', '$senha', NOW())";
+$sql = "INSERT INTO usuario (usuario, email, senha, data_cadastro) values ('$usuario','$email','$senha', NOW())";
 
 if($conexao->query($sql) === TRUE) {
     $_SESSION ['status_cadastro'] = true;
