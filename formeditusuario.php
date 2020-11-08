@@ -32,11 +32,6 @@ $row_usuario = mysqli_fetch_assoc($resultado_usuario);
           <label>Senha</label>
         </div>
         <div class="input-field">
-          <input name="confirmsenha" class="pswrd" type="password" minlength="5" maxlength="16" required>
-          <label>Confirmar senha</label>
-        </div>
-
-        <div class="input-field">
           <select name=pessoa>
             <option>Pessoa Física</option>
             <option>Instituição</option>

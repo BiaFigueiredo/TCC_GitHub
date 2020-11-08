@@ -1,7 +1,7 @@
 
 <?php
 session_start();
-include("conexao.php");
+include('conexao.php');
 
 //Verificando se os campos estão vazios
 if(empty($_POST['email']) || empty($_POST['senha']) || empty($_POST['usuario']) || empty($_POST['confirmsenha'])){
@@ -9,18 +9,12 @@ if(empty($_POST['email']) || empty($_POST['senha']) || empty($_POST['usuario']) 
 	exit();
 }
 
-//Confirmação de senha
-if($_POST['senha'] != $_POST['confirmsenha']){
-    echo ('Senhas não conferem');
-    header('Location: formcadastro.php');
-	exit();
-}
 //Armazenando os dados em variáveis 
 $usuario = mysqli_real_escape_string($conexao, trim($_POST['usuario']));
 $email = mysqli_real_escape_string($conexao, trim($_POST['email']));
 $senha = mysqli_real_escape_string($conexao, trim(md5($_POST['senha'])));
 $pessoa = mysqli_real_escape_string($conexao, trim($_POST['pessoa']));
-$confirmsenha = mysqli_real_escape_string($conexao, trim(md5($_POST['confirmsenha'])));
+
 //Consultando se o email já está cadastrado no banco de dados
 $sql = "select count (*) as total from usuario where email = '$email'";
 $result = mysqli_query($conexao, $sql);

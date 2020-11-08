@@ -5,4 +5,5 @@ define ('USUARIO', 'root');
 define ('SENHA', '');
 define ('DB', 'cadastro');
 $conexao = mysqli_connect(HOST, USUARIO, SENHA, DB) or die ('Erro na conexao com o banco de dados');
+mysqli_set_charset($conexao, "UTF-8");
 ?>
