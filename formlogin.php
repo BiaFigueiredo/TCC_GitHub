@@ -13,9 +13,19 @@ session_start();
   <div class="container">
       <header>Login</header>
     <?php
+      if (isset($_SESSION['status_cadastro'])):
+    ?>
+    <div style="color: RGB(50,220,30);">
+      <p>Cadastro efetuado!</p>
+    </div>
+    <?php
+      endif;
+      unset($_SESSION['status_cadastro']);
+    ?>
+    <?php
       if(isset($_SESSION['nao_autenticado'])):
     ?>
-    <div style="background-color: rgb(225,0,0);">
+    <div style="color: rgb(225,0,0);">
     <p>ERRO: Usuário ou senha inválidos.</p>
     </div>
     <?php

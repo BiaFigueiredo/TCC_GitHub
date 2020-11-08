@@ -1,6 +1,6 @@
 <?php
 include('verifica_login.php');
-include('conexao.php');
+include_once('conexao.php');
 ?>
 <link rel="stylesheet" type="text/css" href="index.css">
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
@@ -36,20 +36,17 @@ LIVROS</div>
                             <div class="conteudo container" >
                                 <div class='some-page-wrapper'>
                                   <div class='row'>
-                                    <div class='column'>
-                                      <div class='green-column'>
-                                        <br>
-                                      </div>
-                                    </div>
                                       <div class='column'>
                                       <div class='blue-column'>
-                                        <h1>Dados do perfil</h1>
+                                        <h1 style="text-align: center;">Dados do perfil</h1>
                                      <div class="Lista01">       
                                        <br>
                                        <ul>
                                         <li><?php echo $_SESSION['email'];?></li>
                                         <li><?php echo $_SESSION['usuario'];?></li>
                                         <br><br>
+                                        <h2><a href="formeditusuario.php">Editar</a></h2>
+                                        <br>
                                         <h2><a href="logout.php">Sair</a></h2>
                                         </ul>
                                         </div>

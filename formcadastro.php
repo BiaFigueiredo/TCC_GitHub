@@ -12,18 +12,19 @@ session_start();
   <body>
     
     <div class="container">
-      <header>Cadastro</header><?php
-      if ($_SESSION['status_cadastro']):
+      <header>Cadastro</header>
+      <?php
+        if(isset($_SESSION['senhas'])):
       ?>
-      <div style="color: RGB(50,220,30);">
-        <p>Cadastro efetuado!</p>
+      <div style="color:RGB(220,0,0)">
+        <p>As senhas inseridas não conferem. Por favor tente novamente.</p>
       </div>
       <?php
-      endif;
-      unset($_SESSION['status_cadastro']);
+        endif;
+        unset($_SESSION['senha']);
       ?>
       <?php
-        if($_SESSION['usuario_cadastrado']):
+        if(isset($_SESSION['usuario_cadastrado'])):
       ?>
       <div style="color:RGB(220,0,0)">
         <p>O email inserido já está cadastrado. Informe outro e tente novamente.</p>
@@ -44,6 +45,10 @@ session_start();
 <div class="input-field">
           <input name="senha" class="pswrd" type="password" minlength="5" maxlength="16" required>
           <label>Senha</label>
+        </div>
+        <div class="input-field">
+          <input name="confirmsenha" class="pswrd" type="password" minlength="5" maxlength="16" required>
+          <label>Confirmar senha</label>
         </div>
         <div class="input-field">
           <select name=pessoa>

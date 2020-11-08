@@ -6,16 +6,24 @@ include("conexao.php");
 //Verificando se os campos estão vazios
 if(empty($_POST['email']) || empty($_POST['senha']) || empty($_POST['usuario']) || empty($_POST['confirmsenha'])){
 	header('Location: formcadastro.php');
-	exit();
+exit();
 }
 
 //Armazenando os dados em variáveis 
 $usuario = mysqli_real_escape_string($conexao, trim($_POST['usuario']));
 $email = mysqli_real_escape_string($conexao, trim($_POST['email']));
 $senha = mysqli_real_escape_string($conexao, trim(md5($_POST['senha'])));
+$confirmsenha = mysqli_real_escape_string($conexao, trim(md5($_POST['confirmsenha'])));
 $pessoa = mysqli_real_escape_string($conexao, trim($_POST['pessoa']));
 
-//Consultando se o email já está cadastrado no banco de dados
+//Confirmando se as senhas informadas são iguais
+if($senha != $confirmsenha){
+    $_SESSION['senhas'] = true;
+    header('Location: formcadastro.php');
+	exit();
+}
+
+//Garantindo, pelo php, que não haja mais de uma conta com o mesmo email
 $sql = "select count (*) as total from usuario where email = '$email'";
 $result = mysqli_query($conexao, $sql);
 $row = mysqli_fetch_assoc($result);
@@ -31,7 +39,10 @@ $sql = "INSERT INTO usuario (usuario, email, pessoa, senha, data_cadastro) value
 if($conexao->query($sql) === TRUE) {
     $_SESSION ['status_cadastro'] = true;
     $conexao->close();
-    header('Location: formcadastro.php');
+    header('Location: login.php');
     exit;
+}
+else {
+    die;
 }
 ?>
