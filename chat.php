@@ -19,14 +19,25 @@ LIVROS</div>
       <label for="click" class="menu-btn">
       <i class="fas fa-bars"></i>
       </label>
-<ul>
-   <li><a class="active" href="index.php">Home</a></li>
-   <li><a href="recentes.php">Livros Recentes</a></li>
-   <li><a href="perfil.php">Perfil</a></li>
-   <li><a href="chat.php">Chat</a></li>
-   <li><a href="formcadastro.php">Cadastro</a></li>
-   <li><a href="formlogin.php">Login</a></li>
-</ul>
+      <ul>
+        <li><a class="active" href="index.php">Home</a></li>
+        <li><a href="recentes.php">Livros Recentes</a></li>
+        <li><a href="perfil.php">Perfil</a></li>
+        <li><a href="chat.php">Chat</a></li>
+        <?php
+        if(isset($_SESSION['email'])):
+          ?>
+            <li><a href='livro_cad.php'>Cadastrar Livro</a></li>
+            <li><a href='logout.php'>Logout</a></li>
+        <?php
+            else:
+        ?>
+            <li><a href='formcadastro.php'>Cadastro</a></li> 
+            <li><a href='formlogin.php'>Login</a></li>
+        <?php
+          endif;
+        ?>
+        </ul>
 </nav>
 <!---------------------------------------- BANNER ------------------------------------------------!-->
 <div class="bannerimage"><h4>Chat</h4></div>
