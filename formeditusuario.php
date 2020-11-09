@@ -20,16 +20,12 @@ $row_usuario = mysqli_fetch_assoc($resultado_usuario);
       <header>Editar</header>
       <form action="editar.php" method="POST">
         <div class="input-field">
-          <input name="usuario" type="text" maxlength="50" required value="<?php echo($row_usuario); ?>">
-          <label>Nome</label>
-        </div>
-        <div class="input-field">
           <input name="email" type="email" maxlength="50" required>
-          <label>Email</label>
+          <label>Novo email</label>
         </div>
 <div class="input-field">
           <input name="senha" class="pswrd" type="password" minlength="5" maxlength="16" required>
-          <label>Senha</label>
+          <label>Nova senha</label>
         </div>
         <div class="input-field">
           <select name=pessoa>

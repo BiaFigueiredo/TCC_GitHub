@@ -10,8 +10,8 @@ exit();
 }
 
 //Armazenando os dados em variáveis 
-$usuario = mysqli_real_escape_string($conexao, trim($_POST['usuario']));
-$email = mysqli_real_escape_string($conexao, trim($_POST['email']));
+$usuario = filter_input(INPUT_POST, 'usuario', FILTER_SANITIZE_STRING);
+$email = filter_input(INPUT_POST, 'email', FILTER_VALIDATE_EMAIL);
 $senha = mysqli_real_escape_string($conexao, trim(md5($_POST['senha'])));
 $confirmsenha = mysqli_real_escape_string($conexao, trim(md5($_POST['confirmsenha'])));
 $pessoa = mysqli_real_escape_string($conexao, trim($_POST['pessoa']));
