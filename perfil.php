@@ -34,6 +34,16 @@ LIVROS</div>
     <!---------------------------------------- TEXTO1 ------------------------------------------------!-->
      <div style=" padding-bottom: 70px;">
                             <div class="conteudo container" >
+                              <?php
+                                if(isset($_SESSION['erro'])):
+                              ?>
+                              <div style="color: rgb(225,0,0);">
+                              <p>Erro: o usuário não foi apagado.</p>
+                              </div>
+                              <?php
+                                endif;
+                                unset($_SESSION['erro']);
+                              ?>
                                 <div class='some-page-wrapper'>
                                   <div class='row'>
                                       <div class='column'>
@@ -42,13 +52,16 @@ LIVROS</div>
                                      <div class="Lista01">       
                                        <br>
                                        <ul>
-                                        <li><?php echo $_SESSION['email'];?></li>
-                                        <li><?php echo $_SESSION['usuario'];?></li>
+                                        <li>Nome</li>
+                                        <br> 
+                                        <li>Email</li>
                                         <br><br>
-                                        <h2><a href="formeditusuario.php">Editar</a></h2>
+                                        <h2><a style="color:orange;" href="formeditusuario.php">Editar</a></h2>
                                         <br>
                                         <h2><a href="logout.php">Sair</a></h2>
-                                        </ul>
+                                        <br>
+                                        <h2><a style="color:red;" href="excluir.php">Excluir</a></h2>
+                                          </ul>
                                         </div>
                                       </div>
                                     </div>

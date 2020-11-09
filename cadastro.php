@@ -24,7 +24,7 @@ if($senha != $confirmsenha){
 }
 
 //Garantindo, pelo php, que não haja mais de uma conta com o mesmo email
-$sql = "select count (*) as total from usuario where email = '$email'";
+$sql = "select count(*) as total from usuario where email = '$email'";
 $result = mysqli_query($conexao, $sql);
 $row = mysqli_fetch_assoc($result);
 

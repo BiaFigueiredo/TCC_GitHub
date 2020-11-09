@@ -1,8 +1,8 @@
---CRIANDO O BANCO DE DADOS
+/*CRIANDO O BANCO DE DADOS*/
 CREATE DATABASE cadastro; 
---USANDO O BANCO DE DADOS CRIADO
+/*USANDO O BANCO DE DADOS CRIADO*/
 USE cadastro;
---CRIANDO A TABELA USUARIO NO BANCO DE DADOS
+/*CRIANDO A TABELA USUARIO NO BANCO DE DADOS*/
 CREATE TABLE `cadastro`.`usuario` (
   `Usuario_id` INT NOT NULL AUTO_INCREMENT,
   `usuario` VARCHAR(200) NOT NULL,
@@ -12,5 +12,6 @@ CREATE TABLE `cadastro`.`usuario` (
   `data_cadastro` DATETIME NOT NULL,
   `editado` DATETIME,
   PRIMARY KEY (`Usuario_id`));
---Garantindo pelo SQL que não haja mais de uma conta com o mesmo email
+/*Garantindo pelo SQL que não haja mais de uma conta com o mesmo email*/
 ALTER TABLE usuario ADD UNIQUE (email);
+

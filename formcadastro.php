@@ -21,7 +21,7 @@ session_start();
       </div>
       <?php
         endif;
-        unset($_SESSION['senha']);
+        unset($_SESSION['senhas']);
       ?>
       <?php
         if(isset($_SESSION['usuario_cadastrado'])):

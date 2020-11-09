@@ -1,3 +1,4 @@
+<?php include_once('excluir.php');?>
 <link rel="stylesheet" type="text/css" href="index.css">
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 <!DOCTYPE html>
@@ -30,6 +31,16 @@ LIVROS</div>
     <!---------------------------------------- TEXTO1 ------------------------------------------------!-->
                     <!-- MEIO DO SITE -->
 <div class="album py-5"style="background-color:">
+<?php
+      if(isset($_SESSION['apagado'])):
+    ?>
+    <div style="color: rgb(0,200,0);">
+    <p>Usuário excluído</p>
+    </div>
+    <?php
+      endif;
+      unset($_SESSION['apagado']);
+    ?>
         <div class="container">
          <h2 class="Centro Titulo2">LIVROS DISPONIVEIS</h2><br><br>
           <div class="row">
