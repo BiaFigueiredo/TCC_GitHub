@@ -25,7 +25,7 @@ LIVROS</div>
         <?php
         if(isset($_SESSION['email'])):
           ?>
-            <li><a href="livro_cad.php">Cadastrar Livro</a></li>
+            <li><a href='Cadlivros.php'>Cadastrar Livro</a></li>
             <li><a href='logout.php'>Logout</a></li>
         <?php
             else:
@@ -45,8 +45,8 @@ LIVROS</div>
 <?php
       if(isset($_SESSION['apagado'])):
     ?>
-    <div style="color: rgb(0,200,0);">
-    <p>Usuário excluído</p>
+    <div>
+    <p style="color: rgb(0,200,0);">Usuário excluído</p>
     </div>
     <?php
       endif;

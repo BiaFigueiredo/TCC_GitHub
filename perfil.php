@@ -28,7 +28,7 @@
          <?php
         if(isset($_SESSION['email'])):
           ?>
-            <li><a href='livro_cad.php'>Cadastrar Livro</a></li>
+            <li><a href='Cadlivros.php'>Cadastrar Livro</a></li>
             <li><a href='logout.php'>Logout</a></li>
         <?php
             else:
@@ -47,6 +47,16 @@
    <!---------------------------------------- TEXTO1 ------------------------------------------------!-->
    <div style=" padding-bottom: 70px;">
    <div class="conteudo container" >
+   <?php
+      if(isset($_SESSION['sucesso'])):
+    ?>
+    <div>
+    <p style="color: rgb(0,200,0);" style="text-align: center;">Livro cadastrado com sucesso</p>
+    </div>
+    <?php
+      endif;
+      unset($_SESSION['sucesso']);
+    ?>
       <?php
          if(isset($_SESSION['erro'])):
          ?>

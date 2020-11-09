@@ -5,8 +5,8 @@ include("conexao.php");
 
 //Verificando se os campos estão vazios
 if(empty($_POST['email']) || empty($_POST['senha']) || empty($_POST['usuario']) || empty($_POST['confirmsenha'])){
-	header('Location: formcadastro.php');
-exit();
+    header('Location: formcadastro.php');
+    exit();
 }
 
 //Armazenando os dados em variáveis 
