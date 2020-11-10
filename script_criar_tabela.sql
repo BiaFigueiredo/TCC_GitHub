@@ -22,5 +22,12 @@ CREATE TABLE IF NOT EXISTS `livrosc` (
   `editora` varchar(220) NOT NULL,
   `imgurl` varchar(1000) NOT NULL,
   primary key (id)
-) DEFAULT CHARSET=utf8;
+) DEFAULT CHARSET=utf8mb4;
+/*CRIANDO A TABELA DO CHAT*/
+	create if not exists table cadastro.chat(
+		`id` int not null AUTO_INCREMENT PRIMARY KEY,
+		`nome` varchar(30) not null,
+		`mensagem` text NOT null
+
+		);
 
