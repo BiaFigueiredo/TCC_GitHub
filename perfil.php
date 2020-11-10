@@ -42,7 +42,7 @@
    </nav>
    <!---------------------------------------- BANNER ------------------------------------------------!-->
    <div class="bannerimage">
-      <h4>USUÁRIO</h4>
+      <h4>PERFIL</h4>
    </div>
    <!---------------------------------------- TEXTO1 ------------------------------------------------!-->
    <div style=" padding-bottom: 70px;">
@@ -50,8 +50,8 @@
    <?php
       if(isset($_SESSION['sucesso'])):
     ?>
-    <div>
-    <p style="color: rgb(0,200,0);" style="text-align: center;">Livro cadastrado com sucesso</p>
+    <div class="conteudo container">
+    <p style="color: rgb(0,200,0);" style="text-align: center;">Livro cadastrado com sucesso!</p>
     </div>
     <?php
       endif;

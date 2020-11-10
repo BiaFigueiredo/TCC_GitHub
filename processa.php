@@ -2,7 +2,7 @@
 session_start();
 include_once("conexao.php");
 
-if(empty($_POST['email']) || empty($_POST['senha']) || empty($_POST['usuario']) || empty($_POST['confirmsenha'])){
+if(empty($_POST['autor']) || empty($_POST['titulo']) || empty($_POST['editora']) || empty($_POST['imgurl'])){
 	$_SESSION['msg'] = "<p style='color:red;'>Livro não foi cadastrado com sucesso</p>";
 	header('Location: Cadlivros.php');
 exit();

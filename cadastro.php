@@ -14,7 +14,7 @@ $usuario = filter_input(INPUT_POST, 'usuario', FILTER_SANITIZE_STRING);
 $email = filter_input(INPUT_POST, 'email', FILTER_VALIDATE_EMAIL);
 $senha = mysqli_real_escape_string($conexao, trim(md5($_POST['senha'])));
 $confirmsenha = mysqli_real_escape_string($conexao, trim(md5($_POST['confirmsenha'])));
-$pessoa = mysqli_real_escape_string($conexao, trim($_POST['pessoa']));
+$pessoa = filter_input(INPUT_POST,'pessoa');
 
 //Confirmando se as senhas informadas são iguais
 if($senha != $confirmsenha){

@@ -1,7 +1,5 @@
 
-<?php include ("conexao.php"); ?>
-
-<?php
+<?php include ("conexao.php"); 
 session_start();
 ?>
 
@@ -25,19 +23,19 @@ session_start();
   <h1>Resgistro Livros</h1>
   <div class="textbox">
     <i class="fas fa-user"></i>
-    <input type="text" name="autor" placeholder="Autor">
+    <input type="text" name="autor" placeholder="Autor" required>
   </div>
   <div class="textbox">
     <i class="fas fa-user"></i>
-    <input type="text" name="titulo" placeholder="Título">
+    <input type="text" name="titulo" placeholder="Título" required>
   </div>
   <div class="textbox">
     <i class="fas fa-user"></i>
-    <input type="text" name="editora" placeholder="Editora">
+    <input type="text" name="editora" placeholder="Editora" required>
   </div>
   <div class="textbox">
     <i class="fas fa-user"></i>
-    <input type="text" name="imgurl" placeholder="Copie a url da sua imagem aqui ">
+    <input type="text" name="imgurl" placeholder="Copie a url da imagem de capa" required>
   </div>
   <input type="submit" class="btn" value="Cadastrar">
 
