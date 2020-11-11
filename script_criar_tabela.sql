@@ -25,7 +25,7 @@ CREATE TABLE IF NOT EXISTS `livrosc` (
 ) DEFAULT CHARSET=utf8mb4;
 ALTER TABLE `cadastro`.`livrosc` 
 ADD COLUMN `usuario` VARCHAR(200) NOT NULL ;
-ALTER TABLE livrosc ADD FOREIGN KEY (usuario) REFERENCES usuario(usuario);
+ALTER TABLE livrosc ADD FOREIGN KEY (Usuario_id) REFERENCES usuario(Usuario_id);
 
 /*CRIANDO A TABELA DO CHAT*/
 	create if not exists table cadastro.chat(
