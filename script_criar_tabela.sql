@@ -23,6 +23,10 @@ CREATE TABLE IF NOT EXISTS `livrosc` (
   `imgurl` varchar(1000) NOT NULL,
   primary key (id)
 ) DEFAULT CHARSET=utf8mb4;
+ALTER TABLE `cadastro`.`livrosc` 
+ADD COLUMN `usuario` VARCHAR(200) NOT NULL ;
+ALTER TABLE livrosc ADD FOREIGN KEY (usuario) REFERENCES usuario(usuario);
+
 /*CRIANDO A TABELA DO CHAT*/
 	create if not exists table cadastro.chat(
 		`id` int not null AUTO_INCREMENT PRIMARY KEY,

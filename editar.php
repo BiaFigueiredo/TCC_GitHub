@@ -4,13 +4,13 @@ session_start();
 include('conexao.php');
 
 //Armazenando os dados em variáveis 
-$id = filter_input(INPUT_POST, 'id', FILTER_SANITIZE_NUMBER_INT);
-$email = filter_input(INPUT_POST, 'email', FILTER_VALIDATE_EMAIL);
-$senha = mysqli_real_escape_string($conexao, trim(md5($_POST['senha'])));
-$pessoa = filter_input(INPUT_POST,'pessoa');
+$email = filter_input(INPUT_POST, 'emailantigo', FILTER_VALIDATE_EMAIL);
+$novoemail = filter_input(INPUT_POST, 'email', FILTER_VALIDATE_EMAIL);
+$novasenha = filter_input(INPUT_POST, 'senha', FILTER_SANITIZE_FULL_SPECIAL_CHARS);
+$novapessoa = filter_input(INPUT_POST,'pessoa');
 
 //Inserindo os dados no banco de dados (incluíndo a data de edição)
-$sql = "UPDATE usuario SET usuario = '$usuario', email = '$email', senha = '$senha', editado = NOW()) WHERE id = '1'";
+$sql = "UPDATE usuario SET email = '$novoemail', senha = 'md5($novasenha)', pessoa = '$novapessoa', editado = NOW()) WHERE email = '$email'";
 
 if($conexao->query($sql) === TRUE) {
     $_SESSION ['status_cadastro'] = true;

@@ -1,9 +1,6 @@
 <?php
 session_start();
-include('conexao.php');
-$sql = "SELECT FROM usuario WHERE id='$id'";
-$resultado_usuario = mysqli_query($conexao, $sql);
-$row_usuario = mysqli_fetch_assoc($resultado_usuario);
+include_once('conexao.php');
 ?>
 
 <!DOCTYPE html>
@@ -19,7 +16,10 @@ $row_usuario = mysqli_fetch_assoc($resultado_usuario);
     <div class="container">
       <header>Editar</header>
       <form action="editar.php" method="POST">
-      <input name="id" type="hidden" required>
+      <div class="input-field">
+          <input name="emailantigo" type="email" maxlength="50" required>
+          <label>Email já cadastrado</label>
+        </div>
         <div class="input-field">
           <input name="email" type="email" maxlength="50" required>
           <label>Novo email</label>

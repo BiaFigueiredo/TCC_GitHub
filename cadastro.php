@@ -12,12 +12,12 @@ if(empty($_POST['email']) || empty($_POST['senha']) || empty($_POST['usuario']) 
 //Armazenando os dados em variáveis 
 $usuario = filter_input(INPUT_POST, 'usuario', FILTER_SANITIZE_STRING);
 $email = filter_input(INPUT_POST, 'email', FILTER_VALIDATE_EMAIL);
-$senha = mysqli_real_escape_string($conexao, trim(md5($_POST['senha'])));
-$confirmsenha = mysqli_real_escape_string($conexao, trim(md5($_POST['confirmsenha'])));
+$senha = filter_input(INPUT_POST, 'senha', FILTER_SANITIZE_FULL_SPECIAL_CHARS);
+$confirmsenha = filter_input(INPUT_POST, 'confirmsenha', FILTER_SANITIZE_FULL_SPECIAL_CHARS);
 $pessoa = filter_input(INPUT_POST,'pessoa');
 
 //Confirmando se as senhas informadas são iguais
-if($senha != $confirmsenha){
+if(md5($senha) != md5($confirmsenha)){
     $_SESSION['senhas'] = true;
     header('Location: formcadastro.php');
 	exit();
@@ -34,7 +34,7 @@ if($row['total'] == 1){
     exit;
 }
 //Inserindo os dados no banco de dados (incluíndo a data de cadastro)
-$sql = "INSERT INTO usuario (usuario, email, pessoa, senha, data_cadastro) values ('$usuario', '$email', '$pessoa', '$senha', NOW())";
+$sql = "INSERT INTO usuario (usuario, email, pessoa, senha, data_cadastro) values ('$usuario', '$email', '$pessoa', md5('$senha'), NOW())";
 
 if($conexao->query($sql) === TRUE) {
     $_SESSION ['status_cadastro'] = true;

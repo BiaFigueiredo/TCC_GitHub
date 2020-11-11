@@ -77,11 +77,11 @@
                         <form id="contact">
                             <fieldset>
                                 <p>Nome de Usuário</p>
-                                <input placeholder="Nome do Usuário" type="text" tabindex="1" value="Nome de Exemplo"required>
+                                <input placeholder="Nome do Usuário" type="text" tabindex="1" value="Nome"required>
                                 </fieldset>
                                 <p>Endereço de Email</p>
                                     <fieldset>
-                                      <input placeholder="Endereço de email" type="email" tabindex="2" value="exemplo@prov.com" required>
+                                      <input placeholder="Endereço de email" type="email" tabindex="2" value="<?php echo $_SESSION['email']; ?>" required>
                                     </fieldset>
                                     <fieldset>
                                     	<div id="botoes">
