@@ -22,7 +22,6 @@
       </label>
       <ul>
          <li><a class="active" href="index.php">Home</a></li>
-         <li><a href="recentes.php">Livros Recentes</a></li>
          <li><a href="perfil.php">Perfil</a></li>
          <li><a href="chat.php">Chat</a></li>
          <?php

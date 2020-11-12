@@ -1,6 +1,5 @@
 
-<?php include ("conexao.php"); 
-session_start();
+<?php include_once("conexao.php"); 
 ?>
 
 <!DOCTYPE html>
