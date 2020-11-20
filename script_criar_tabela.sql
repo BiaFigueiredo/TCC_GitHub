@@ -38,7 +38,7 @@ INSERT INTO `livrosc` (`id`, `autor`, `titulo`, `editora`, `imgurl`) VALUES
 	(12, 'Sarah J. Maas', 'Corte de Espinhos e Rosas', 'Galera', 'img/corte_de_espinhos.jpg');
 ALTER TABLE `cadastro`.`livrosc` 
 ADD COLUMN `usuario` VARCHAR(200) NOT NULL ;
-ALTER TABLE livrosc ADD FOREIGN KEY (Usuario_id) REFERENCES usuario(Usuario_id);
+ALTER TABLE livrosc ADD FOREIGN KEY (usuario) REFERENCES usuario(usuario);
 /*CRIANDO A TABELA DO CHAT*/
 	create if not exists table cadastro.chat(
 		`id` int not null AUTO_INCREMENT PRIMARY KEY,
