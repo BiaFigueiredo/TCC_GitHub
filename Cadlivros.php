@@ -22,6 +22,10 @@
   <h1>Resgistro Livros</h1>
   <div class="textbox">
     <i class="fas fa-user"></i>
+    <input type="text" name="user" placeholder="Nome de Usuario " required>
+  </div>
+  <div class="textbox">
+    <i class="fas fa-user"></i>
     <input type="text" name="autor" placeholder="Autor" required>
   </div>
   <div class="textbox">
@@ -37,7 +41,7 @@
     <input type="text" name="imgurl" placeholder="Copie a url da imagem de capa" required>
   </div>
   <input type="submit" class="btn" value="Cadastrar">
-
+<h4>Se o nome de usuario estiver incorreto com o verdadeiro o anuncio sera excluido em 24h </h4>
   </form>
   
 </div>
