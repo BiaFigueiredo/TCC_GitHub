@@ -17,6 +17,7 @@ ALTER TABLE usuario ADD UNIQUE (email);
 /*CRIANDO A TABELA DOS LIVROS*/
 CREATE TABLE IF NOT EXISTS `livrosc` (
   `id` int not null auto_increment ,
+  `user` varchar(220) NOT NULL,
   `autor` varchar(220) NOT NULL,
   `titulo` varchar(220) NOT NULL,
   `editora` varchar(220) NOT NULL,
