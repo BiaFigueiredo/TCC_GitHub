@@ -10,7 +10,6 @@ CREATE TABLE IF NOT EXISTS `cadastro`.`usuario` (
   `email` VARCHAR(50) NOT NULL,
   `pessoa` VARCHAR(45) NOT NULL,
   `data_cadastro` DATETIME NOT NULL,
-  `editado` DATETIME,
   PRIMARY KEY (`Usuario_id`)) DEFAULT CHARSET=utf8mb4;
 /*Garantindo pelo SQL que não haja mais de uma conta com o mesmo email*/
 ALTER TABLE usuario ADD UNIQUE (email);
@@ -24,6 +23,7 @@ CREATE TABLE IF NOT EXISTS `livrosc` (
   `imgurl` varchar(1000) NOT NULL,
   primary key (id)
 ) DEFAULT CHARSET=utf8mb4 ENGINE=InnoDB AUTO_INCREMENT=13;
+/*INSERINDO LIVROS DE EXEMPLO PARA TESTE*/
 INSERT INTO `livrosc` (`id`, `autor`, `titulo`, `editora`, `imgurl`) VALUES
 	(1, ' Rachael Lippincott', 'A Cinco Passos de Você', 'Alt', 'img/1.jpg'),
 	(2, 'Kiera cass', 'A Seleção', 'Seguinte', 'img/a.jpg'),
@@ -37,9 +37,6 @@ INSERT INTO `livrosc` (`id`, `autor`, `titulo`, `editora`, `imgurl`) VALUES
 	(10, 'Delia Owens', 'Um Lugar Bem Longe Daqui', 'Intrínseca', 'img/longe.jpg'),
 	(11, 'Rainbow Rowell', 'Eleonor & Park', 'Novo Século', 'img/eleonor.jpg'),
 	(12, 'Sarah J. Maas', 'Corte de Espinhos e Rosas', 'Galera', 'img/corte_de_espinhos.jpg');
-ALTER TABLE `cadastro`.`livrosc` 
-ADD COLUMN `usuario` VARCHAR(200) NOT NULL ;
-ALTER TABLE livrosc ADD FOREIGN KEY (usuario) REFERENCES usuario(usuario);
 /*CRIANDO A TABELA DO CHAT*/
 	create if not exists table cadastro.chat(
 		`id` int not null AUTO_INCREMENT PRIMARY KEY,

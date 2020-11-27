@@ -44,18 +44,18 @@ session_start();
         </div>
 <div class="input-field">
           <input name="senha" class="pswrd" type="password" minlength="5" maxlength="16" required>
-          <label>Senha</label>
+          <span class="show">SHOW</span>
+          <label for="senha">Senha</label>
         </div>
         <div class="input-field">
           <input name="confirmsenha" class="pswrd" type="password" minlength="5" maxlength="16" required>
-          <label>Confirmar senha</label>
+          <label for="confirmsenha">Confirmar senha</label>
         </div>
         <div class="input-field">
           <select name=pessoa>
             <option>Pessoa Física</option>
             <option>Instituição</option>
           </select>
-          <span class="show">SHOW</span>
         </div>
 
 <div class="button">

@@ -33,6 +33,10 @@ session_start();
       unset($_SESSION['nao_autenticado']);
     ?>
       <form action="login.php" method="post">
+      <div class="input-field">
+          <input name="nome" type="text" id="nome" required>
+          <label for="nome">Nome</label>
+        </div>
         <div class="input-field">
           <input name="email" type="email" id="email" required>
           <label for="email">Email</label>

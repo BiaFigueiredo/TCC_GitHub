@@ -51,9 +51,9 @@ session_start();
     <h2 class="Centro Titulo2">LIVROS DISPONIVEIS (mais recentes primeiro)</h2><br><br>
     <div class="row">
         <?php
-        $result = $conexao->query('select * from livrosc order by id desc ');
+        $result = $conexao->query('SELECT * from livrosc order by id desc ');
         for ($i=0; $i < $result->num_rows; $i++) {
-          $livro = $result->fetch_array(MYSQLI_ASSOC)
+          $livro = $result->fetch_array(MYSQLI_ASSOC);
         ?>
           <div class="col-md-3">
             <div class="card mb-4 box-shadow">

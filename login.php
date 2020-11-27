@@ -2,15 +2,16 @@
 session_start();
 include("conexao.php");
 //Verificando se os campos estão vazios
-if(empty($_POST['email']) || empty($_POST['senha'])) {
+if(empty($_POST['email']) || empty($_POST['senha']) || empty($_POST['nome'])) {
 	header('Location: formlogin.php');
 	exit();
 }
 //Armazenando dados inseridos no formulário de login
 $email = filter_input(INPUT_POST, 'email', FILTER_VALIDATE_EMAIL);
+$nome = filter_input(INPUT_POST, 'nome', FILTER_SANITIZE_SPECIAL_CHARS);
 $senha = filter_input(INPUT_POST, 'senha', FILTER_SANITIZE_FULL_SPECIAL_CHARS);
 //Confirmando se os dados existem no banco de dados
-$query = "SELECT email FROM usuario WHERE email = '{$email}' AND senha = md5('{$senha}')";
+$query = "SELECT email FROM usuario WHERE email = '{$email}' AND senha = md5('{$senha}') AND usuario = '{$nome}'";
 $result = mysqli_query($conexao, $query);
 $resultado = mysqli_fetch_array($result);
 $row = mysqli_num_rows($result);
