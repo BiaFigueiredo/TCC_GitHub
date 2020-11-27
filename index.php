@@ -61,8 +61,8 @@ session_start();
               <div class="card-body">
                 <ul>
                   <li><?php echo utf8_encode($livro['titulo']) ?></li>
-                  <li><?php echo utf8_encode($livro['autor']) ?></li>
-                  <li><?php echo utf8_encode( $livro['editora']) ?></li>
+                  <li><h6 style="margin-bottom: 0; margin-top: 10px;">Autor:</h6><?php echo utf8_encode($livro['autor']) ?></li>
+                  <li><h6 style="margin-bottom: 0; margin-top: 10px;">Editora:</h6><?php echo utf8_encode($livro['editora'])?></li>
                 </ul>
               </div>
             </div>

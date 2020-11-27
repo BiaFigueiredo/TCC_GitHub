@@ -85,8 +85,6 @@
                                     <fieldset>
                                     	<div id="botoes">
                                         <a href="logout.php">Sair</a>&nbsp;
-                                        <a href="excluir.php">Excluir</a>&nbsp;
-                                        <a href="formeditusuario.php">Editar</a>&nbsp;
                                     </div>
                                     </fieldset>
                                 </form></div>
