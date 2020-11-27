@@ -24,19 +24,19 @@ CREATE TABLE IF NOT EXISTS `livrosc` (
   primary key (id)
 ) DEFAULT CHARSET=utf8mb4 ENGINE=InnoDB AUTO_INCREMENT=13;
 /*INSERINDO LIVROS DE EXEMPLO PARA TESTE*/
-INSERT INTO `livrosc` (`id`, `autor`, `titulo`, `editora`, `imgurl`) VALUES
-	(1, ' Rachael Lippincott', 'A Cinco Passos de Você', 'Alt', 'img/1.jpg'),
-	(2, 'Kiera cass', 'A Seleção', 'Seguinte', 'img/a.jpg'),
-	(3, 'Clare Vanderpool', 'Em Algum Lugar Nas Estrelas', 'Darkside', 'img/estrelas.jpg'),
-	(4, 'Becky Albertalli', 'Com Amor, Simon', 'Intrínseca', 'img/simon.jpg'),
-	(5, 'John Green', 'Quem é você Alasca', 'Intrínseca', 'img/quem.jpg'),
-	(6, 'Jennifer L. Armentrout', 'Se Não Houver Amanhã', 'Universo dos Livros', 'img/if.jpg'),
-	(7, 'Victoria Aveyard', 'Rainha Vermelha', 'Seguinte', 'img/rainha.jpg'),
-	(8, 'Stephen King', 'Sob a Redoma', 'Suma', 'img/8.jpg'),
-	(9, 'Mary Shelley', 'Frankenstein', 'Lackington', 'img/9.jpg'),
-	(10, 'Delia Owens', 'Um Lugar Bem Longe Daqui', 'Intrínseca', 'img/longe.jpg'),
-	(11, 'Rainbow Rowell', 'Eleonor & Park', 'Novo Século', 'img/eleonor.jpg'),
-	(12, 'Sarah J. Maas', 'Corte de Espinhos e Rosas', 'Galera', 'img/corte_de_espinhos.jpg');
+INSERT INTO `livrosc` (`user`, `autor`, `titulo`, `editora`, `imgurl`) VALUES
+	('User1', 'Rachael Lippincott', 'A Cinco Passos de Você', 'Alt', 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT7bigV6oYPI23buODLxiAV17FV21sqzbkRTuTM0VG2nNvUAkNmxR97-CER2AF77TdHajqQa4XI&usqp=CAc'),
+	('User2', 'Kiera cass', 'A Seleção', 'Seguinte', 'https://lojasaraiva.vteximg.com.br/arquivos/ids/6993791-287-426/780220.jpg?v=637075499365830000'),	
+    ('User3', 'Clare Vanderpool', 'Em Algum Lugar Nas Estrelas', 'Darkside', 'https://lojasaraiva.vteximg.com.br/arquivos/ids/4602202/1008900989.jpg?v=637054626553270000'),
+	('User4', 'Becky Albertalli', 'Com Amor, Simon', 'Intrínseca', 'https://upload.wikimedia.org/wikipedia/pt/6/67/Love%2C_Simon.jpg'),
+	('User1', 'John Green', 'Quem é você Alasca', 'Intrínseca', 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQtPknpLwMafQKni5UCYg5kakXWzkiT5LG3xIFptkW7Oz1epoIxznBgGy65eZhmY-B3JEjW4oQ&usqp=CAc'),
+	('User7', 'Jennifer L. Armentrout', 'Se Não Houver Amanhã', 'Universo dos Livros', 'https://images-na.ssl-images-amazon.com/images/I/51v+bCLrhtL._SX339_BO1,204,203,200_.jpg'),
+    ('User12', 'Victoria Aveyard', 'Rainha Vermelha', 'Seguinte', 'https://lojasaraiva.vteximg.com.br/arquivos/ids/12054910/1008976886.jpg?v=637141926959370000'),
+    ('User15', 'Stephen King', 'Sob a Redoma', 'Suma', 'https://images-submarino.b2w.io/produtos/imagens/111949294/111949307_1SZ.jpg'),	
+    ('User89', 'Mary Shelley', 'Frankenstein', 'Lackington', 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcREdVreVpmMP2WRh_FjLp-Yfu-QDfgcBs70FFq6K5l3CLjdLOBvxeVUk1d664YnI3BVZgdSGpxW&usqp=CAc'),
+	('User34', 'Delia Owens', 'Um Lugar Bem Longe Daqui', 'Intrínseca', 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQN0wxc3VtwXup4k2vDlJgjACERkJxv98hPx8bzisBt-yPMzMK1eXejmxlMViu7lqZ584cgHqM&usqp=CAc'),
+	('User56', 'Rainbow Rowell', 'Eleanor & Park', 'Novo Século', 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSQfZIyFr0VxqRDoezSylKnl2Cy8P5DdlRc8ghvUyIoF4Q6LTRLLEU8oo0TaA7FWUSfaYpR15lb&usqp=CAc'),
+	('User47', 'Sarah J. Maas', 'Corte de Espinhos e Rosas', 'Galera', 'https://livrariascuritiba.vteximg.com.br/arquivos/ids/1908714-525-525/LV389070.jpg?v=637262208459900000');
 /*CRIANDO A TABELA DO CHAT*/
 	create if not exists table cadastro.chat(
 		`id` int not null AUTO_INCREMENT PRIMARY KEY,

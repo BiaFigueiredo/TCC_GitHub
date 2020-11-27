@@ -5,7 +5,7 @@ session_start();
 <html>
 <!DOCTYPE html>
 <head>
-  <meta charset="utf-8">
+  <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>LIVROS</title>
   <script src="https://kit.fontawesome.com/a076d05399.js"></script>
@@ -50,7 +50,7 @@ session_start();
   <div class="container">
     <h2 class="Centro Titulo2">LIVROS DISPONIVEIS (mais recentes primeiro)</h2><br><br>
     <div class="row">
-        <?php
+        <?php 
         $result = $conexao->query('SELECT * from livrosc order by id desc ');
         for ($i=0; $i < $result->num_rows; $i++) {
           $livro = $result->fetch_array(MYSQLI_ASSOC);
@@ -60,9 +60,10 @@ session_start();
               <img src="<?php echo $livro['imgurl'] ?>" class="card-img-top" alt="...">
               <div class="card-body">
                 <ul>
-                  <li><?php echo utf8_encode($livro['titulo']) ?></li>
-                  <li><h6 style="margin-bottom: 0; margin-top: 10px;">Autor:</h6><?php echo utf8_encode($livro['autor']) ?></li>
-                  <li><h6 style="margin-bottom: 0; margin-top: 10px;">Editora:</h6><?php echo utf8_encode($livro['editora'])?></li>
+                  <li><?php echo $livro['titulo']; ?></li>
+                  <li><h6 style="margin-bottom: 0; margin-top: 10px;">Autor:</h6><?php echo $livro['autor']; ?></li>
+                  <li><h6 style="margin-bottom: 0; margin-top: 10px;">Editora:</h6><?php echo $livro['editora']; ?></li>
+                  <li><h6 style="margin-bottom: 0; margin-top: 10px;">Usuario:</h6><?php echo $livro['user'];?></li>
                 </ul>
               </div>
             </div>
