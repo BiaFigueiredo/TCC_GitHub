@@ -26,6 +26,7 @@
          <?php
         if(isset($_SESSION['email'])):
           ?>
+            <li><a href="chat_tcc/index.html">Chat</a></li>
             <li><a href='Cadlivros.php'>Cadastrar Livro</a></li>
             <li><a href='logout.php'>Logout</a></li>
         <?php
