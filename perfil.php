@@ -14,7 +14,7 @@
    <!---------------------------------------- NAVBAR ------------------------------------------------!-->
    <nav>
       <div class="logo">
-         LIVROS
+      AcerBooks
       </div>
       <input type="checkbox" id="click">
       <label for="click" class="menu-btn">
@@ -23,7 +23,6 @@
       <ul>
          <li><a class="active" href="index.php">Home</a></li>
          <li><a href="perfil.php">Perfil</a></li>
-         <li><a href="chat.php">Chat</a></li>
          <?php
         if(isset($_SESSION['email'])):
           ?>
@@ -122,63 +121,51 @@
       <hr class="my-4">
    </div>
    <!---------------------------------------- FOOTER ------------------------------------------------!-->
-   <script src="https://kit.fontawesome.com/a076d05399.js"></script>
-   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   </head>
-   <body>
-      <footer>
-      <div class="main-content">
-      <div class="left box">
-         <h2>
-            Sobre nós
-         </h2>
-         <div class="content">
-            <p>Este é um projeto realizado como trabalho de conclusão de curso de: Beatriz Figueiredo, Beatriz Menezes, Guilherme Kina, Leonardo Akahoshi, Paulo Gabriel e Pedro Miranda.</p>
-            <div class="social">
-               <a href="https://facebook.com"><span class="fab fa-facebook-f"></span></a>
-               <a href="https://twitter.com"><span class="fab fa-twitter"></span></a>
-               <a href="https://instagram.com"><span class="fab fa-instagram"></span></a>
-               <a href="https://youtube.com"><span class="fab fa-youtube"></span></a>
-            </div>
-         </div>
-      </div>
-      <div class="center box">
-         <h2>
-            Contato
-         </h2>
-         <div class="content">
-            <div class="place">
-               <span class="fas fa-map-marker-alt"></span>
-               <span class="text">Etec PJ</span>
-            </div>
-            <div class="phone">
-               <span class="fas fa-phone-alt"></span>
-               <span class="text">9-9999-9999</span>
-            </div>
-            <div class="email">
-               <span class="fas fa-envelope"></span>
-               <span class="text">Exemplo@gmail.com</span>
-            </div>
-         </div>
-      </div>
-      <div class="right box">
-      <h2>
-         Ajuda
-      </h2>
+<script src="https://kit.fontawesome.com/a076d05399.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<footer>
+  <div class="main-content">
+    <div class="left box">
+      <h2>Sobre nós</h2>
       <div class="content">
-      <form action="#">
-      <div class="email">
-         <div class="text">
-            Email *
-         </div>
-         <input type="email" value="Exemplo@gmail.com">
-         <a class="linkrodape" href="#faq">FAQ</a>
+        <p>Este é um projeto realizado como trabalho de conclusão de curso de: Beatriz Figueiredo, Beatriz Menezes, Guilherme Kina, Leonardo Akahoshi, Paulo Gabriel e Pedro Miranda.</p>
       </div>
-      <div class="bottom">
-         <center>
-            <span class="credit">distribuído por <a href="#">Livros</a> | </span>
-            <span class="far fa-copyright"></span> 2020 Todos os direitos reservados.
-         </center>
+    </div>
+    <div class="center box">
+      <h2>Contato</h2>
+      <div class="content">
+        <div class="place">
+          <span class="fas fa-map-marker-alt"></span>
+          <span class="text">Etec PJ</span>
+        </div>
+        <div class="phone">
+          <span class="fas fa-phone-alt"></span>
+          <span class="text">9-9999-9999</span>
+        </div>
+        <div class="email">
+          <span class="fas fa-envelope"></span>
+          <span class="text">acerbooks@gmail.com</span>
+        </div>
       </div>
+    </div>
+    <div class="right box">
+      <h2>Ajuda</h2>
+      <div class="content">
+        <form action="#">
+          <div class="email">
+            <div class="text">Email *</div>
+            <input type="email" value="acerbooks@gmail.com">
+          </div>
+          <div class="bottom">
+            <center>
+              <span class="credit">Distribuído por <a href="#">AcerBooks</a> | </span>
+              <span class="far fa-copyright"></span> 2020 Todos os direitos reservados.
+            </center>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</footer>
 </body>
 </html>

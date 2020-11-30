@@ -17,7 +17,7 @@ session_start();
 <!---------------------------------------- NAVBAR ------------------------------------------------!-->
 <nav>
   <div class="logo">
-    LIVROS
+    AcerBooks
   </div>
   <input type="checkbox" id="click">
   <label for="click" class="menu-btn">
@@ -26,7 +26,6 @@ session_start();
   <ul>
         <li><a class="active" href="index.php">Home</a></li>
         <li><a href="perfil.php">Perfil</a></li>
-        <li><a href="chat.php">Chat</a></li>
         <?php
         if(isset($_SESSION['email'])):
           ?>
@@ -61,9 +60,12 @@ session_start();
               <div class="card-body">
                 <ul>
                   <li><?php echo $livro['titulo']; ?></li>
-                  <li><h6 style="margin-bottom: 0; margin-top: 10px;">Autor:</h6><?php echo $livro['autor']; ?></li>
-                  <li><h6 style="margin-bottom: 0; margin-top: 10px;">Editora:</h6><?php echo $livro['editora']; ?></li>
-                  <li><h6 style="margin-bottom: 0; margin-top: 10px;">Usuario:</h6><?php echo $livro['user'];?></li>
+                  <li><h6 style="margin-bottom: 0; margin-top: 10px;">Autor:
+                  </h6><?php echo $livro['autor']; ?></li>
+                  <li><h6 style="margin-bottom: 0; margin-top: 10px;">Editora:
+                  </h6><?php echo $livro['editora']; ?></li>
+                  <li><h6 style="margin-bottom: 0; margin-top: 10px;">Usuario:
+                  </h6><?php echo $livro['user'];?></li>
                 </ul>
               </div>
             </div>
@@ -111,12 +113,6 @@ session_start();
       <h2>Sobre nós</h2>
       <div class="content">
         <p>Este é um projeto realizado como trabalho de conclusão de curso de: Beatriz Figueiredo, Beatriz Menezes, Guilherme Kina, Leonardo Akahoshi, Paulo Gabriel e Pedro Miranda.</p>
-        <div class="social">
-          <a href="https://facebook.com"><span class="fab fa-facebook-f"></span></a>
-          <a href="https://twitter.com"><span class="fab fa-twitter"></span></a>
-          <a href="https://instagram.com"><span class="fab fa-instagram"></span></a>
-          <a href="https://youtube.com"><span class="fab fa-youtube"></span></a>
-        </div>
       </div>
     </div>
     <div class="center box">
@@ -132,7 +128,7 @@ session_start();
         </div>
         <div class="email">
           <span class="fas fa-envelope"></span>
-          <span class="text">Exemplo@gmail.com</span>
+          <span class="text">acerbooks@gmail.com</span>
         </div>
       </div>
     </div>
@@ -142,12 +138,11 @@ session_start();
         <form action="#">
           <div class="email">
             <div class="text">Email *</div>
-            <input type="email" value="Exemplo@gmail.com">
-            <a class="linkrodape" href="perguntasfrequentes">FAQ</a>
+            <input type="email" value="acerbooks@gmail.com">
           </div>
           <div class="bottom">
             <center>
-              <span class="credit">distribuído por <a href="#">Livros</a> | </span>
+              <span class="credit">Distribuído por <a href="#">AcerBooks</a> | </span>
               <span class="far fa-copyright"></span> 2020 Todos os direitos reservados.
             </center>
           </div>

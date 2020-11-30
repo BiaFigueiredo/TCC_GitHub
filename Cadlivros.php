@@ -22,30 +22,30 @@
   <h1>Resgistro Livros</h1>
   <div class="textbox">
     <i class="fas fa-user"></i>
-    <input type="text" name="user" placeholder="Nome de Usuario " required>
+    <input type="text" name="user" maxlength="50" placeholder="Seu email" required>
   </div>
   <div class="textbox">
     <i class="fas fa-user"></i>
-    <input type="text" name="autor" placeholder="Autor" required>
+    <input type="text" name="autor" maxlength="50" placeholder="Autor" required>
   </div>
   <div class="textbox">
     <i class="fas fa-user"></i>
-    <input type="text" name="titulo" placeholder="Título" required>
+    <input type="text" name="titulo" maxlength="50" placeholder="Título" required>
   </div>
   <div class="textbox">
     <i class="fas fa-user"></i>
-    <input type="text" name="editora" placeholder="Editora" required>
+    <input type="text" name="editora" maxlength="20" placeholder="Editora" required>
   </div>
   <div class="textbox">
     <i class="fas fa-user"></i>
-    <input type="text" name="imgurl" placeholder="Copie a url da imagem de capa" required>
+    <input type="text" name="imgurl" placeholder="URL da imagem de capa" maxlength="1000" required>
   </div>
   <div class="textbox">
     <i class="fas fa-user"></i>
-    <input type="text" name="sinopse" placeholder="Insira a sinopse do livro" required>
+    <input type="text" name="sinopse" maxlength="2000" placeholder="Sinopse do livro" required>
   </div>
   <input type="submit" class="btn" value="Cadastrar">
-<h4>Se o nome de usuario estiver incorreto o anuncio sera excluido em 24h </h4>
+<h4>Se o email estiver incorreto, os interessados não poderão te contatar.</h4>
   </form>
   
 </div>
