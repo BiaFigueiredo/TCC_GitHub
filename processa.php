@@ -15,7 +15,7 @@ $editora = filter_input(INPUT_POST, 'editora', FILTER_SANITIZE_STRING);
 $imgurl = filter_input(INPUT_POST, 'imgurl', FILTER_SANITIZE_STRING);
 $sinopse = filter_input(INPUT_POST, 'sinopse', FILTER_SANITIZE_STRING);
 
-$result_usuario = "INSERT INTO livrosc (autor, titulo, editora, imgurl, sinopse) VALUES ('$autor', '$titulo','$user', '$editora','$imgurl', '$sinopse' )";
+$result_usuario = "INSERT INTO livrosc (user, autor, titulo, editora, imgurl, sinopse) VALUES ('$user', '$autor', '$titulo', '$editora','$imgurl', '$sinopse' )";
 $resultado_usuario = mysqli_query($conexao, $result_usuario);
 
 if(mysqli_insert_id($conexao)){
