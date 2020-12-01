@@ -13,9 +13,9 @@ $autor = filter_input(INPUT_POST, 'autor', FILTER_SANITIZE_STRING);
 $titulo = filter_input(INPUT_POST, 'titulo', FILTER_SANITIZE_STRING);
 $editora = filter_input(INPUT_POST, 'editora', FILTER_SANITIZE_STRING);
 $imgurl = filter_input(INPUT_POST, 'imgurl', FILTER_SANITIZE_STRING);
-$sinopse = filter_input(INPUT_POST, 'sinopse', FILTER_SANITIZE_STRING);
 
-$result_usuario = "INSERT INTO livrosc (user, autor, titulo, editora, imgurl, sinopse) VALUES ('$user', '$autor', '$titulo', '$editora','$imgurl', '$sinopse' )";
+$result_usuario = "INSERT INTO livrosc (user, autor, titulo, editora, imgurl) VALUES
+ ('$user', '$autor', '$titulo', '$editora','$imgurl')";
 $resultado_usuario = mysqli_query($conexao, $result_usuario);
 
 if(mysqli_insert_id($conexao)){
@@ -26,3 +26,4 @@ if(mysqli_insert_id($conexao)){
 	header("Location: Cadlivros.php");
 }
 unset($_SESSION['msg']);
+?>

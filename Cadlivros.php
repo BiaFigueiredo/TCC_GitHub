@@ -40,10 +40,6 @@
     <i class="fas fa-user"></i>
     <input type="text" name="imgurl" placeholder="URL da imagem de capa" maxlength="1000" required>
   </div>
-  <div class="textbox">
-    <i class="fas fa-user"></i>
-    <input type="text" name="sinopse" maxlength="2000" placeholder="Sinopse do livro" required>
-  </div>
   <input type="submit" class="btn" value="Cadastrar">
 <h4>Se o email estiver incorreto, os interessados não poderão te contatar.</h4>
   </form>
